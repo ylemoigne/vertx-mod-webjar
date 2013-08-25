@@ -6,15 +6,13 @@ Allow to add and query webjar to your vertx.io module.
 Configuration
 -------------
 
-<pre>
-{
-    "webjars":[<webjars>],
+    {
+      "webjars":[<webjars>],
     
-	"repos-file":<repos-files>, 
-	"webjars-dir":<webjars-dir>,
-	"pullin-on-startup":<pullin-on-startup>
-}
-<pre>
+	  "repos-file":<repos-files>, 
+	  "webjars-dir":<webjars-dir>,
+	  "pullin-on-startup":<pullin-on-startup>
+    }
 
 * `webjars` comma separated list of webjar maven coordinate, eg: `"org.webjars:angularjs:1.0.7", "org.webjars:bootstrap:3.0.0"`
 * `repos-files` Path to the file containing maven repositories, default is vertx's `repos.txt`
