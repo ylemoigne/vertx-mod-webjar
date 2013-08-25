@@ -1,0 +1,10 @@
+{
+    "main": "fr.javatic.vertx.webjar.WebjarVerticle",
+
+    "description": "Support webjar in vertx module",
+    "licenses": ["Eclipse Public License - v 1.0"],
+    "author": "Yann Le Moigne",
+
+    "keywords": ["webjar"],
+    "homepage": "https://github.com/ylemoigne/vertx-mod-webjar"
+}

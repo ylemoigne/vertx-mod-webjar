@@ -1,0 +1,52 @@
+apply from: "gradle/vertx.gradle"
+
+configurations {
+	webjar
+}
+
+dependencies {
+	testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+
+	compile 'org.eclipse.aether:aether-api:0.9.0.M3'
+	compile 'org.eclipse.aether:aether-util:0.9.0.M3'
+	compile 'org.eclipse.aether:aether-impl:0.9.0.M3'
+	compile 'org.eclipse.aether:aether-connector-basic:0.9.0.M3'
+	compile 'org.eclipse.aether:aether-transport-file:0.9.0.M3'
+	compile 'org.eclipse.aether:aether-transport-http:0.9.0.M3'
+	compile 'org.apache.maven:maven-aether-provider:3.1.0'
+}
+
+def configurePom(def pom) {
+	pom.project {
+		name rootProject.name
+		description 'Support webjar in vertx module'
+		inceptionYear '2013'
+		packaging 'jar'
+
+		url 'https://github.com/ylemoigne/vertx-mod-webjar'
+
+		developers {
+			developer {
+				id 'ylemoigne'
+				name 'Yann Le Moigne'
+				email 'ylemoigne_AT_javatic_DOT_fr'
+			}
+		}
+
+		scm {
+			url 'git@github.com:ylemoigne/vertx-mod-webjar.git'
+		}
+
+		licenses {
+			license {
+				name 'Eclipse Public License - v 1.0'
+				url 'http://www.eclipse.org/legal/epl-v10.html'
+				distribution 'repo'
+			}
+		}
+
+		properties {
+			setProperty('project.build.sourceEncoding', 'UTF8')
+		}
+	}
+}
